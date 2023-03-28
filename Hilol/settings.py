@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hilol_db',
-        'USER': 'admin',
-        'PASSWORD': 'AVNS_SF0kfnbSyuRr-AU-yu',
+        'USER': 'doadmin',
+        'PASSWORD': 'AVNS_IGvfDafMoXWyVEz8qxH',
         'PORT': '25060',
         'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
         'sslmode' : 'REQUIRED'
