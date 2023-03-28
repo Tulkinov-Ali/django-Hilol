@@ -84,7 +84,7 @@ DATABASES = {
         'PASSWORD': 'AVNS_SF0kfnbSyuRr-AU-yu',
         'PORT': '25060',
         'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
-        'sslmode' = 'REQUIRED'
+        'sslmode' : 'REQUIRED'
     }
 }
 
