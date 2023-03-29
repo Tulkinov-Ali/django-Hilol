@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CSRF_TRUSTED_ORIGINS = ['https://6722-31-148-166-124.eu.ngrok.io']
 
 # Application definition
 
@@ -194,11 +195,16 @@ JAZZMIN_SETTINGS = {
     # for the full list of 5.13.0 free icon classes
     "icons": {
         "auth": "fas fa-users-cog",
-        "auth.user": "fas fa-user",
+        "auth.user": "fas fa-user-circle",
         "auth.Group": "fas fa-users",
         "market.merchant": "fas fa-store",
         "market.Orders": "fas fa-archive",
         "market.foods": "fas fa-shopping-basket",
+        "market.Category": "fas fa-list",
+        "market.Couriers": "fas fa-shipping-fast",
+        "market.Clients": "fas fa-user-friends",
+        "market.AllCategories": "fas fa-user-tie",
+
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
