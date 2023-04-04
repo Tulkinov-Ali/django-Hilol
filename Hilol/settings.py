@@ -81,11 +81,20 @@ WSGI_APPLICATION = 'Hilol.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+<<<<<<< HEAD
         'NAME': 'market',
         'USER': 'root',
         'PASSWORD': 'python',
         'PORT': '3306',
         'HOST': 'localhost',
+=======
+        'NAME': 'defaultdb',
+        'USER': 'admin',
+        'PASSWORD': 'AVNS_SF0kfnbSyuRr-AU-yu_',
+        'PORT': '25060',
+        'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
+        'sslmode' : 'REQUIRED'
+>>>>>>> 99504316cb63bfd8ac518ef77bb220fb06c35804
     }
 }
 
