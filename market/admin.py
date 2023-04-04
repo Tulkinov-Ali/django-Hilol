@@ -9,7 +9,7 @@ class OrdersAdmin(admin.ModelAdmin):
 
 class FoodsAdmin(admin.ModelAdmin):
     search_fields = ['id', 'name', 'category', 'price', 'type', 'img']
-    list_display = ['id', 'name', 'category', 'price', 'type', 'img']
+    list_display = ['id', 'name', 'category', 'price', 'type', 'img', 'items']
 
 
 class MerchantAdmin(admin.ModelAdmin):
@@ -32,13 +32,10 @@ class ClientsAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'contact', 'location', 'ChatId', 'date']
 
 
-class AllCtgAdmin(admin.ModelAdmin):
-    search_fields = ['name']
-    list_display = ['id', 'name']
-
+# class ShoppingListAmin(admin.ModelAdmin):
+#       list_display = ['']
 
 admin.site.register(Foods, FoodsAdmin)
-admin.site.register(AllCategories, AllCtgAdmin)
 admin.site.register(Clients, ClientsAdmin)
 admin.site.register(Merchant, MerchantAdmin)
 admin.site.register(Orders, OrdersAdmin)
