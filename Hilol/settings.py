@@ -205,7 +205,6 @@ JAZZMIN_SETTINGS = {
         "market.Category": "fas fa-list",
         "market.Couriers": "fas fa-shipping-fast",
         "market.Clients": "fas fa-user-friends",
-        "market.AllCategories": "fas fa-user-tie",
 
     },
     # Icons that are used when one is not manually specified
