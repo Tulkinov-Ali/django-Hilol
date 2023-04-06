@@ -16,8 +16,8 @@ class Category(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Дочерная-Категория'
-        verbose_name = "doch"
+        verbose_name_plural = 'Категории'
+        verbose_name = "Категория"
 
 
 class Foods(models.Model):
