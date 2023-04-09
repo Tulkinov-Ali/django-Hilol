@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a_7!^9$6gvq6o-vm8xis*w(rqa26(srpx5j4&vpx^g%2$-g9sz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['64.226.98.203', '64.226.98.203:8000']
 
 CSRF_TRUSTED_ORIGINS = ['https://6722-31-148-166-124.eu.ngrok.io']
 
@@ -81,19 +81,20 @@ WSGI_APPLICATION = 'Hilol.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'market',
-        'USER': 'root',
-        'PASSWORD': 'python',
-        'PORT': '3306',
-        'HOST': 'localhost',
 
-        # 'NAME': 'defaultdb',
-        # 'USER': 'admin',
-        # 'PASSWORD': 'AVNS_SF0kfnbSyuRr-AU-yu_',
-        # 'PORT': '25060',
-        # 'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
-        # 'sslmode' : 'REQUIRED'
-        # >>>>>>> 99504316cb63bfd8ac518ef77bb220fb06c35804
+        # 'NAME': 'market',
+        # 'USER': 'root',
+        # 'PASSWORD': 'python',
+        # 'PORT': '3306',
+        # 'HOST': 'localhost',
+
+        'NAME': 'hilol_db',
+        'USER': 'Newest',
+        'PASSWORD': 'AVNS_oKnvXE8j2CmU8QSnO74',
+        'PORT': '25060',
+        'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
+        'sslmode': 'REQUIRED'
+
     }
 }
 # Password validation
@@ -207,7 +208,6 @@ JAZZMIN_SETTINGS = {
         "market.Category": "fas fa-list",
         "market.Couriers": "fas fa-shipping-fast",
         "market.Clients": "fas fa-user-friends",
-        "market.AllCategories": "fas fa-user-tie",
 
     },
     # Icons that are used when one is not manually specified
