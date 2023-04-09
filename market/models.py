@@ -1,12 +1,6 @@
 from django.db import models
 from django_jsonform.models.fields import JSONField
 
-turlari = (('1-Dona', '1-Dona'),
-           ('Kg', 'Kg'),
-           ('Ltr', 'Ltr'),
-           ('blok', 'blok')
-           )
-
 
 class Category(models.Model):
     name = models.CharField(max_length=60, verbose_name='Названия')
@@ -16,24 +10,33 @@ class Category(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Дочерная-Категория'
-        verbose_name = "doch"
+        verbose_name_plural = 'Категории'
+        verbose_name = "Категория"
 
 
 class Foods(models.Model):
     name = models.CharField(max_length=255, verbose_name='Названия')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     price = models.FloatField(verbose_name='Цена', blank=True, null=True, default=0)
-    type = models.CharField(max_length=100, choices=turlari, verbose_name='Тип')
+    type = models.CharField(max_length=100, verbose_name='Тип')
     img = models.ImageField(upload_to='images/', default=None, verbose_name='Картина', blank=True, null=True)
 
     ITEMS_SCHEMA = {
         'type': 'array',
         'items': {
-            'type': 'string'
+            'type': 'object',
+            'properties': {
+                'name': {'type': 'string'},
+                'in_price': {'type': 'integer'},
+                'out_price': {'type': 'integer'},
+            },
+            "required": ["name", "price"]
         }
     }
     items = JSONField(schema=ITEMS_SCHEMA, blank=True, null=True, verbose_name='Дополнительный')
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name_plural = 'Продукты'

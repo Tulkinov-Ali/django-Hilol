@@ -1,15 +1,12 @@
 from django.contrib import admin
 from .models import *
+from .resource import *
+from import_export.admin import ImportExportModelAdmin
 
 
 class OrdersAdmin(admin.ModelAdmin):
     search_fields = ['id', 'place', 'courier', 'status']
     list_display = ['id', 'place', 'courier', 'status', 'order_time']
-
-
-class FoodsAdmin(admin.ModelAdmin):
-    search_fields = ['id', 'name', 'category', 'price', 'type', 'img']
-    list_display = ['id', 'name', 'category', 'price', 'type', 'img', 'items']
 
 
 class MerchantAdmin(admin.ModelAdmin):
@@ -32,8 +29,11 @@ class ClientsAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'contact', 'location', 'ChatId', 'date']
 
 
-# class ShoppingListAmin(admin.ModelAdmin):
-#       list_display = ['']
+class FoodsAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+    resource_class = ReportResource
+    search_fields = ['id', 'name', 'category', 'price', 'type', 'img']
+    list_display = ['id', 'name', 'category', 'price', 'type', 'img', 'items']
+
 
 admin.site.register(Foods, FoodsAdmin)
 admin.site.register(Clients, ClientsAdmin)

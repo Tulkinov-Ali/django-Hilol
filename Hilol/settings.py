@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -42,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'market',
     'django_jsonform',
+    'import_export',
+
 ]
 
 MIDDLEWARE = [
@@ -74,30 +75,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Hilol.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-<<<<<<< HEAD
         'NAME': 'market',
         'USER': 'root',
         'PASSWORD': 'python',
         'PORT': '3306',
         'HOST': 'localhost',
-=======
-        'NAME': 'defaultdb',
-        'USER': 'admin',
-        'PASSWORD': 'AVNS_SF0kfnbSyuRr-AU-yu_',
-        'PORT': '25060',
-        'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
-        'sslmode' : 'REQUIRED'
->>>>>>> 99504316cb63bfd8ac518ef77bb220fb06c35804
+
+        # 'NAME': 'defaultdb',
+        # 'USER': 'admin',
+        # 'PASSWORD': 'AVNS_SF0kfnbSyuRr-AU-yu_',
+        # 'PORT': '25060',
+        # 'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
+        # 'sslmode' : 'REQUIRED'
+        # >>>>>>> 99504316cb63bfd8ac518ef77bb220fb06c35804
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -116,7 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -127,7 +124,6 @@ TIME_ZONE = 'Asia/Tashkent'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
@@ -140,8 +136,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT=os.path.join(BASE_DIR, "media/")
-
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
@@ -172,8 +167,7 @@ JAZZMIN_SETTINGS = {
     # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
     "user_avatar": None,
 
-
-       # Side Menu #
+    # Side Menu #
     #############
 
     # Whether to display the side menu
