@@ -16,7 +16,7 @@ class Category(models.Model):
 
 class Foods(models.Model):
     name = models.CharField(max_length=255, verbose_name='Названия')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория', null=True, blank=True)
     price = models.FloatField(verbose_name='Цена', blank=True, null=True, default=0)
     type = models.CharField(max_length=100, verbose_name='Тип')
     img = models.ImageField(upload_to='images/', default=None, verbose_name='Картина', blank=True, null=True)
