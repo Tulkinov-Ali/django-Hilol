@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a_7!^9$6gvq6o-vm8xis*w(rqa26(srpx5j4&vpx^g%2$-g9sz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['64.226.98.203:8000', '64.226.98.203']
 
 CSRF_TRUSTED_ORIGINS = ['https://6722-31-148-166-124.eu.ngrok.io']
 
@@ -81,18 +81,12 @@ WSGI_APPLICATION = 'Hilol.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'market',
-        'USER': 'root',
-        'PASSWORD': 'python',
-        'PORT': '3306',
-        'HOST': 'localhost',
-
-        # 'NAME': 'hilol_db',
-        # 'USER': 'Newest',
-        # 'PASSWORD': 'AVNS_oKnvXE8j2CmU8QSnO74',
-        # 'PORT': '25060',
-        # 'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
-        # 'sslmode': 'REQUIRED'
+        'NAME': 'hilol_db',
+        'USER': 'Newest',
+        'PASSWORD': 'AVNS_oKnvXE8j2CmU8QSnO74',
+        'PORT': '25060',
+        'HOST': 'django-hilol-do-user-9028453-0.b.db.ondigitalocean.com',
+        'sslmode': 'REQUIRED'
 
     }
 }
